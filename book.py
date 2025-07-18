@@ -1,11 +1,11 @@
-class KNWHRE_BKSTRE:
+class Book:
     def __init__(self, book_name, author, price, stash):
         self.book_name = book_name
         self.author = author
         self.price = price
         self.stash = stash
 
-    def log_inventory(self):
+    def to_inventory(self):
         return{
             "title": self.book_name,
             "author":self.author,
@@ -13,6 +13,6 @@ class KNWHRE_BKSTRE:
             "quantity": self.stash
         }
     @classmethod
-    def load_inventory(state, item):
+    def from_inventory(state, item):
         return state(item['title'], item['author'], item['price'], item['quantity'])
     
