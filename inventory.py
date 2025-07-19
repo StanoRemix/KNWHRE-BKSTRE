@@ -34,8 +34,8 @@ class KNWHRE_BKSTRE:
                 print(f"Files loaded from {filename} Successfully!")
             else:
                 print(f"No files found. {filename} empty.")
-        except ValueError:
-            print("Invalid input.")
+        except FileExistsError:
+            print("Error.")
 
     def grand_total(self):
         return ceil(sum(item.price * item.stash for item in self.stock))
