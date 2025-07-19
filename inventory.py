@@ -39,5 +39,9 @@ class KNWHRE_BKSTRE:
         except FileExistsError:
             print("\nError.")
 
+    def search_inventory(self, search_phrase):
+        match = [item for item in self.stock if search_phrase.lower() in item.book_name.lower()]
+        return match
+
     def grand_total(self):
         return ceil(sum(item.price * item.stash for item in self.stock))

@@ -1,9 +1,15 @@
 [
     {
-        "title": "Zero to hero",
-        "author": "Peter thiel",
-        "price": 5.99,
-        "quantity": 5
+        "title": "art of war",
+        "author": "sun tzu",
+        "price": 10000.0,
+        "quantity": 100
+    },
+    {
+        "title": "the republic",
+        "author": "plato",
+        "price": 9800.0,
+        "quantity": 200
     },
     {
         "title": "oracle paths",
