@@ -14,10 +14,12 @@ class KNWHRE_BKSTRE:
 
     def view_item(self):
         if not self.stock:
-            print("No Books Available. Come back later")
+            print("\nNo Books Available. Come back later")
         else:
+            print("-"*30)
             for i , item in enumerate(self.stock, 1):
                 print(f"{i}. {item}")
+            print("-"*30)
 
     def log_inventory(self, filename="KNWHRE-BKSTRE.json"):
         gen = [item.to_inventory() for item in self.stock]
@@ -36,6 +38,10 @@ class KNWHRE_BKSTRE:
                 print(f"No files found. {filename} empty.")
         except FileExistsError:
             print("Error.")
+
+    def search_inventory(self, search_phrase):
+        match = [item for item in self.stock if search_phrase.lower() in item.book_name.lower()]
+        return match
 
     def grand_total(self):
         return ceil(sum(item.price * item.stash for item in self.stock))
