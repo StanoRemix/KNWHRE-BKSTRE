@@ -6,13 +6,13 @@ from math import ceil
 class KNWHRE_BKSTRE:
     def __init__(self):
         self.stock = []
-    
+
     def add_item(self, item):
         self.stock.append(item)
 
     def view_item(self):
         return self.stock
-    
+
     def log_inventory(self, filename="KNWHRE-BKSTRE.json"):
         with open(filename, "w") as f:
             gen = [item.to_inventory() for item in self.stock]
