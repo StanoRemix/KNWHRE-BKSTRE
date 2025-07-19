@@ -5,6 +5,9 @@ class Book:
         self.price = round(float(price), 2)
         self.stash = int(stash)
 
+    def __repr__(self):
+        return f"{self.book_name} by {self.author} - ₦{self.price} ({self.stash} in stock)"
+
     def to_inventory(self):
         return{
             "title": self.book_name,
