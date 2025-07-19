@@ -4,5 +4,11 @@
         "author": "Peter thiel",
         "price": 5.99,
         "quantity": 5
+    },
+    {
+        "title": "oracle paths",
+        "author": "arkilinze",
+        "price": 12000.0,
+        "quantity": 2000
     }
 ]

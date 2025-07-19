@@ -16,8 +16,8 @@ class Book:
             "quantity": self.stash
         }
     @staticmethod
-    def from_inventory(state, item):
-        return state(item['title'], 
+    def from_inventory( item):
+        return Book(item['title'], 
                      item['author'], 
                      item['price'], 
                      item['quantity']
